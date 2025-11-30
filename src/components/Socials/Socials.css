@@ -1,0 +1,21 @@
+.socials-container{
+  padding: 1em;
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 3em;
+}
+
+.socials-button{
+  color: white;
+  outline: none;
+}
+
+.socials-button:hover{
+  cursor: pointer;
+}
+
+.socials-button:focus{
+  outline: none;
+}
