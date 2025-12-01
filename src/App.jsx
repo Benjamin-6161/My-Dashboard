@@ -12,9 +12,9 @@ import NavBar from "./components/NavBar/NavBar.jsx"
 import Footer from "./components/Footer/Footer.jsx"
 /* COMPONENTS */
 
-/*PROJECTS*/
+/*PAGES*/
 import ProjectsPage from "./pages/ProjectsPage/ProjectsPage.jsx";
-/*PROJECTS*/
+/*PAGES*/
 
 function RootLayout() {
   return (
@@ -37,7 +37,7 @@ function App(){
   
   const router = createBrowserRouter([
     {
-      path: "/",
+      path: "*",
       element: <RootLayout/>,
       children: [
         {path: "test", element: <ComponentsTest/>},
