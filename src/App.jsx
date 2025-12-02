@@ -4,7 +4,7 @@ import {useEffect} from "react";
 /*UTILS*/
 import FadeInSection from "./utils/FadeInSection.jsx"
 import ComponentsTest from "./utils/ComponentsTest.jsx"
-import {createStars} from "./utils/StarGenerator.js"
+import {createStars, createShootingStar} from "./utils/StarGenerator.js"
 /*UTILS*/
 
 /* COMPONENTS  */
@@ -23,6 +23,8 @@ function RootLayout() {
   
   useEffect(() => {
     createStars(200);
+    createShootingStar();
+    createShootingStar();
   },[location]);
   
   return (
@@ -49,7 +51,7 @@ function App(){
       element: <RootLayout/>,
       children: [
         {path: "test", element: <ComponentsTest/>},
-        {path: "projects", element: <ProjectsPage/>},
+        /*{path: "projects", element: <ProjectsPage/>},*/
       ]
     }
   ])

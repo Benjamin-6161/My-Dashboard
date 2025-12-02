@@ -35,7 +35,7 @@
   100% { transform: scale(0.7); opacity: 0.2; }
 }
 
-/*.shooting-star {
+.shooting-star {
   position: absolute;
   width: 3px;
   height: 3px;
@@ -43,7 +43,7 @@
   border-radius: 50%;
   opacity: 0;
   filter: drop-shadow(0 0 6px white);
-  animation: shoot 1.2s linear infinite;
+  animation: shoot 1.2s linear forwards;
 }
 
 @keyframes shoot {
@@ -54,12 +54,14 @@
   10% {
     opacity: 1;
   }
+  40%{
+    opacity: 0.6;
+  }
   80% {
     opacity: 1;
   }
   100% {
-    transform: translate(600px, 300px) scale(1.2);
+    transform: translate(70vw, 40vw) scale(1.2);
     opacity: 0;
   }
 }
-*/

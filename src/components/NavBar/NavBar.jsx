@@ -20,7 +20,7 @@ function NavBar(){
        
       <ul className="nav-links">
         <li onClick={()=> navigate("/")}>Home</li>
-        <li onClick={()=> navigate("projects")}>Projects</li>
+        {/*<li onClick={()=> navigate("projects")}>Projects</li>*/}
       </ul>
     </nav>
     );

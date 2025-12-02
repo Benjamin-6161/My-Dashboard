@@ -29,23 +29,25 @@ export function createStars(count = 150) {
     sky.appendChild(star);
   }
 }
-
-/*function createShootingStar() {
+export function createShootingStar() {
   const sky = document.querySelector('.sky');
   const star = document.createElement('div');
 
   star.classList.add('shooting-star');
 
-  // Start somewhere at the top-left quadrant
-  const startX = Math.random() * 40; // 0–40vw
-  const startY = Math.random() * 30; // 0–30vh
-
-  // Time between appearances: 5–20 seconds
-  const delay = Math.random() * 15 + 5;
-
+  const startX = Math.random() * 40; // 
+  const startY = Math.random() * 30; // 
+  
   star.style.left = startX + 'vw';
   star.style.top = startY + 'vh';
-  star.style.animationDelay = delay + 's';
-
+  
   sky.appendChild(star);
-}*/
+ 
+  setTimeout(() => {
+    star.remove();
+  }, 1300); 
+
+  // Schedule the next shooting star
+  const nextDelay = (Math.random() * 15 + 5) * 1000;
+  setTimeout(createShootingStar, nextDelay);
+}
