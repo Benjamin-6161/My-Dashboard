@@ -1,13 +1,12 @@
-html, body{
- background-image: url("/starry.jpg");
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
+.sky {
+  position: relative;
   min-height: 100vh;
   min-width: 100vw;
   margin: 0;
   color: white;
   font-family: Tahoma;
+  background: black url("/starry.jpg") center/cover no-repeat;
+  /*overflow: hidden;*/
 }
 
 .page{
@@ -21,3 +20,46 @@ html, body{
 .main{
   flex: 1;
 }
+
+.star {
+  position: absolute;
+  background: white;
+  border-radius: 50%;
+  opacity: 0;
+  animation: twinkle linear infinite;
+}
+
+@keyframes twinkle {
+  0%   { transform: scale(0.7); opacity: 0.2; }
+  50%  { transform: scale(1);   opacity: 1;   }
+  100% { transform: scale(0.7); opacity: 0.2; }
+}
+
+/*.shooting-star {
+  position: absolute;
+  width: 3px;
+  height: 3px;
+  background: white;
+  border-radius: 50%;
+  opacity: 0;
+  filter: drop-shadow(0 0 6px white);
+  animation: shoot 1.2s linear infinite;
+}
+
+@keyframes shoot {
+  0% {
+    transform: translate(0, 0) scale(0.8);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    transform: translate(600px, 300px) scale(1.2);
+    opacity: 0;
+  }
+}
+*/

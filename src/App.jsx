@@ -1,8 +1,10 @@
-import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
+import { createBrowserRouter, RouterProvider, Outlet, useLocation } from "react-router-dom";
+import {useEffect} from "react";
 
 /*UTILS*/
 import FadeInSection from "./utils/FadeInSection.jsx"
 import ComponentsTest from "./utils/ComponentsTest.jsx"
+import {createStars} from "./utils/StarGenerator.js"
 /*UTILS*/
 
 /* COMPONENTS  */
@@ -17,6 +19,12 @@ import ProjectsPage from "./pages/ProjectsPage/ProjectsPage.jsx";
 /*PAGES*/
 
 function RootLayout() {
+  const location = useLocation();
+  
+  useEffect(() => {
+    createStars(200);
+  },[location]);
+  
   return (
     <>
       <div className = "page">
